@@ -1,0 +1,63 @@
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.351);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal_content {
+    background-color: aliceblue;
+    width: 50vw;
+    height: 20vh;
+    margin: auto;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px gray;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#saveBtn {
+  background-color: rgb(0, 149, 255);
+  color: white;
+  width: 80px;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+#cancelBtn {
+  background-color: rgb(255, 21, 0);
+  color: white;
+  width: 80px;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+/* .update_inputs button:hover{
+    background-color: rgb(255, 21, 0);
+    color: white;
+} */
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 6px;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
