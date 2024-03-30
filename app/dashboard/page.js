@@ -2,11 +2,13 @@ import User from "@/schema/userschema/User";
 import React from "react";
 import DeleteBtn from "../(components)/deleteBtn/DeleteBtn";
 import Modal from "../(components)/modal/Modal";
+import axios from "axios";
 
 const getData = async () => {
-  let res = await User.find();
-  console.log(res)
-  return res;
+  let res = await axios.get("http://localhost:3000/api/userApi");
+  let data = res.data.body;
+  console.log(data);
+  return data;
 };
 
 export default async function Dashboard() {

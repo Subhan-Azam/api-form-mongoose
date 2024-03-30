@@ -4,6 +4,16 @@ import User from "../../../schema/userschema/User";
 import { NextResponse } from "next/server";
 
 dbConnect();
+
+export const GET = async () => {
+  try {
+    let body = await User.find();
+    return NextResponse.json({body});
+  } catch (error) {
+    return NextResponse.json({ massage: "Something wrong" });
+  }
+};
+
 export const POST = async (req) => {
   try {
     let body = await req.json();
